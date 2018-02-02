@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Google map API</title>
+  <meta name="description" content="A description of your website">
+  <meta name="keywords" content="keyword1, keyword2, keyword3">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css\font-awesome-4.7.0\css\font-awesome.css" />
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="inputBox">
+      <div class="input-group row mt-3">
+        <div class="input-group-prepend col-md-3 mb-2">
+          <span class="input-group-text" id="">Depature and Destination</span>
+        </div>
+        <input type="text" id="departure" class="col-md-3 mb-2" placeholder="Departure from...">
+        <input type="text" id="destination" class="col-md-3 mb-2" placeholder="Destination is...">
+        <div class="button col-md-3 row">
+          <div class="input-group-append col-4 mb-2">
+            <button class="btn btn-outline-secondary driving" type="button">DRIVING</button>
+          </div>
+          <div class="input-group-append col-4 mb-2">
+            <button class="btn btn-outline-secondary walking" type="button">WALKING</button>
+          </div>
+          <div class="input-group-append col-4 mb-2">
+            <button class="btn btn-outline-secondary bicycling" type="button">BICYCLING</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <div class="Distance row">
+        <p class="col-12"></p>
+      </div>
+      <div class="Duration row">
+        <p class="col-12"></p>
+      </div>
+      <div class="Alarm row">
+        <p class="col-12"></p>
+      </div>
+    </div>
+    <div id="map"></div>
+    <div class="widgets row">
+      <!-- Facebook widgets -->
+      <iframe class="col-4 mt-4" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=50px&layout=button_count&action=recommend&size=small&show_faces=true&share=true&height=46&appId" width="50px" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      <!-- Google plus widgets -->
+      <!-- <div class="g-plusone col-4 mt-4" data-size="medium"></div> -->
+      <div class="col-4 mt-4"></div>
+      <!-- Twitter -->
+      <div class="col-4 mt-4">
+        <div class=" float-right">
+          <a class="twitter-share-button"
+            href="https://twitter.com/intent/tweet?text=Hello%20world"
+            data-size="medium">
+          Tweet</a>
+        </div>
+      </div>
+      <!-- twitter timeline -->
+      <div class="col-12 mt-4">
+        <div class="text-center">
+          <a class="twitter-timeline"
+            href="https://twitter.com/Learn_OpenDoors"
+            data-width="500"
+            data-height="300">
+          Tweets by @TwitterDev
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Twitter -->
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+  <!-- Google plus -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="JS\app.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAD1qkvSluZyzx6BQWO9YTPxznWaNJXFE&callback=initMap&libraries=places"></script>
+</body>
+</html>
